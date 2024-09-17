@@ -268,7 +268,8 @@ function wp_site_aliases_output_site_list_column( $column, $site_id ) {
 	// Show all aliases
 	if ( ! empty( $aliases ) ) {
 		foreach ( $aliases as $alias ) {
-			echo esc_html( $alias->domain ) . '<br>';
+//			echo esc_html( $alias->domain ) . '<br>';
+			echo apply_filters('wp_site_aliases.output_site_list_column', esc_html($alias->domain)) . '<br>';
 		}
 
 	// No aliases

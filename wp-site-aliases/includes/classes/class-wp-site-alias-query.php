@@ -564,6 +564,8 @@ class WP_Site_Alias_Query {
 
 		$where = implode( ' AND ', $this->sql_clauses['where'] );
 
+        $groupby = '';
+
 		$pieces = array( 'fields', 'join', 'where', 'orderby', 'limits', 'groupby' );
 
 		/**
